@@ -1,0 +1,8 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <h2>{{ bulletin.title }}</h2>
+    <p>{{ bulletin.content }}</p>
+    <a href="{% url 'bulletin_edit' bulletin.pk %}">Edit</a>
+    <a href="{% url 'bulletin_delete' bulletin.pk %}">Delete</a>
+{% endblock %}

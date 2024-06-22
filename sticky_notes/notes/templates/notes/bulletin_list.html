@@ -1,0 +1,13 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <h2>Bulletins</h2>
+    <a href="{% url 'bulletin_create' %}">Create new bulletin</a>
+    <ul>
+        {% for bulletin in bulletins %}
+            <li>
+                <a href="{% url 'bulletin_detail' bulletin.pk %}">{{ bulletin.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

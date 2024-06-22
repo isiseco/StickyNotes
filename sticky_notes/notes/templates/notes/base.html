@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Notes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><a href="{% url 'note_list' %}">Sticky Notes</a></h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
